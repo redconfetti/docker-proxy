@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "EditorConfig.editorconfig",              // EditorConfig Support for Visual Studio Code
+    "shd101wyy.markdown-preview-enhanced",    // Markdown Preview Enhanced ported to vscode
+    "stkb.rewrap",                            // Re-wraps comments and other text to a given line length.
+  ]
+}

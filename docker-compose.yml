@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  nginx-proxy:
+    image: registry.digitalocean.com/redconfetti/nginx-proxy
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock
+  arcadia:
+    image: registry.digitalocean.com/redconfetti/arcadia
+    expose:
+      - "80"
+    environment:
+      - "VIRTUAL_HOST=arcadia.redconfetti.com"
